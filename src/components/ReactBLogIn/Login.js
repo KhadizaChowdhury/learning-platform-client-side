@@ -10,7 +10,7 @@ import { Toast } from 'bootstrap';
 const auth = getAuth(app);
 
 const Login = () => {
-    const { user, signIn, verifyEmail, googleSignIn, gitSignIn } = useContext(AuthContext);
+    const { user, signIn, googleSignIn, gitSignIn } = useContext(AuthContext);
     // console.log(signIn, googleSignIn);
 
     const googleProvider = new GoogleAuthProvider();

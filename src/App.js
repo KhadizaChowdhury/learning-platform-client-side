@@ -11,6 +11,7 @@ import Category from './components/Category/Category';
 import Courses from './components/Courses/Courses';
 import FAQ from './components/FAQ/FAQ';
 import Blog from './components/Blog/Blog';
+import CheckOut from './components/CheckOut/CheckOut';
 
 function App() {
   const router = createBrowserRouter([
@@ -35,6 +36,13 @@ function App() {
         {
           path:"/blog",
           element: <Blog></Blog>
+        },
+        {
+          path:'/checkout/:courseId',
+          element: <ProtectedRoutes>
+          <CheckOut></CheckOut>
+        </ProtectedRoutes>,
+          loader: ({ params }) => fetch(`https://server-site-flame.vercel.app/checkout/${params.courseId}`)
         },
         {
           path: "/register",
