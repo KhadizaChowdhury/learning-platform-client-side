@@ -12,7 +12,7 @@ const Main = () => {
             <div className='contain'>
                 <Container>
                     <Row>
-                        <Col xs={10}>
+                        <Col lg={10}>
                             <Outlet></Outlet>
                         </Col>
                         <Col>

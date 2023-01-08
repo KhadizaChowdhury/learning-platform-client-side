@@ -1,8 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { FaShareAlt } from 'react-icons/fa';
-import { FiBookmark, FiStar, FiEye } from 'react-icons/fi';
+import { FiStar, FiEye } from 'react-icons/fi';
 import './CourseInfo.css'
 
 const CourseInfo = (props) => {
@@ -14,19 +13,13 @@ const CourseInfo = (props) => {
         <div className='col course-dark'>
             <Card className='mb-3'>
                 <Card.Header>
-                    <div className='d-flex justify-content-between align-items-center'>
-                        <div className='d-flex align-items-center'>
-                            <div className='me-3'>
-                                <img className='author_img img-fluid' src={img} alt="Author-Img" />
-                            </div>
-                            <div>
-                                <p className='m-0'>{name}</p>
-                                <p className='m-0'>{published_date}</p>
-                            </div>
+                    <div className='d-flex align-items-center'>
+                        <div className='me-3'>
+                            <img className='author_img img-fluid' src={img} alt="Author-Img" />
                         </div>
                         <div>
-                            <FiBookmark className='me-2' />
-                            <FaShareAlt />
+                            <p className='m-0'>{name}</p>
+                            <p className='m-0'>{published_date}</p>
                         </div>
                     </div>
                 </Card.Header>

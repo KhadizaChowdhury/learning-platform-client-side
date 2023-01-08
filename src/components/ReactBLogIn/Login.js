@@ -97,7 +97,7 @@ const Login = () => {
             })
     }
     return (
-        <div className='container mt-5 w-50 m-auto'>
+        <div className='container mt-5 col-md-6 m-auto'>
             {
                 user?.uid ?
                     <div>

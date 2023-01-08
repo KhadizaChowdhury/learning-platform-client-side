@@ -12,10 +12,10 @@ const Courses = () => {
     console.log(CourseDetails)
     const { _id, title, image_url, category_id, details } = CourseDetails;
     return (
-        <div className='col course-dark'>
+        <div className='row course-dark justify-content-center'>
             {
                 _id ?
-                    <div>
+                    <div className='col-lg-9 col-md-9'>
                         <Card ref={ref} className='mb-3'>
                             <Card.Img className='img-fluid' variant="top" src={image_url} />
                             <Card.Body>

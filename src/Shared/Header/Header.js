@@ -6,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 // import { Button } from 'react-bootstrap';
 import { Link, } from 'react-router-dom';
+import logo from '../../images/logo.png';
 import { AuthContext } from '../../contexts/UserContext';
 import { ToggleThemeContext } from '../../contexts/ThemeContext';
 import { FaUserAlt } from 'react-icons/fa';
@@ -31,18 +32,24 @@ function CollapsibleExample() {
     return (
         <Navbar collapseOnSelect expand="lg">
             <Container>
-                <Navbar.Brand href="/" className='text-white'>Smart Learning</Navbar.Brand>
+                <Navbar.Brand href="/" className='text-white me-5'><Image
+                    alt=""
+                    src={logo}
+                    width="40"
+                    height="40"
+                    className="me-3"
+                />Smart Learning</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="me-auto ms-2 ms-lg-5">
                         <Nav.Link href="/courses">Courses</Nav.Link>
                         <Nav.Link href="/faq">FAQ</Nav.Link>
                         <Nav.Link href="/blog">Blog</Nav.Link>
                     </Nav>
-                    <Nav className='align-items-center'>
+                    <Nav className='ms-2'>
                         {
                             user?.uid &&
-                            <div className='d-flex flex-row-reverse align-items-center'>
+                            <div className='d-flex flex-lg-row-reverse align-items-center'>
                                 <div className='me-3 user-img text-end'>
                                     {
                                         user?.photoURL ?
