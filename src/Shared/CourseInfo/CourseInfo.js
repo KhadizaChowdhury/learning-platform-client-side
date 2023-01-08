@@ -36,9 +36,9 @@ const CourseInfo = (props) => {
                     <Card.Text>
                         {
                             details?.length > 200 ?
-                                <p>{details?.slice(0, 250) + '...'} <Link to={`/course/${_id}`}>Read More</Link></p>
+                                <span>{details?.slice(0, 250) + '...'} <Link to={`/course/${_id}`}>Read More</Link></span>
                                 :
-                                <p>{details}</p>
+                                <span>{details}</span>
 
                         }
                     </Card.Text>

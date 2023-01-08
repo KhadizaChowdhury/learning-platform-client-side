@@ -17,3 +17,10 @@ Nav .log-menu{
 .nav-link:hover {
     background-color: #FFFFFF;
 }
+.uName {
+    display: none;
+  }		
+  .user-img:hover + .uName {
+    display: block!important;
+    color: #fff;
+    font-size: 20px;}

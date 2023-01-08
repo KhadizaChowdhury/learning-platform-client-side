@@ -9,6 +9,8 @@ import Home from './components/Home/Home';
 import NotFound from './components/404 _page/NotFound';
 import Category from './components/Category/Category';
 import Courses from './components/Courses/Courses';
+import FAQ from './components/FAQ/FAQ';
+import Blog from './components/Blog/Blog';
 
 function App() {
   const router = createBrowserRouter([
@@ -25,6 +27,14 @@ function App() {
           path: "/courses",
           element: <Home></Home>,
           loader: () => fetch('https://server-site-flame.vercel.app/all-courses')
+        },
+        {
+          path:"/faq",
+          element: <FAQ></FAQ>
+        },
+        {
+          path:"/blog",
+          element: <Blog></Blog>
         },
         {
           path: "/register",

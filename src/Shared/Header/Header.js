@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Image } from 'react-bootstrap';
+import { Image, NavDropdown } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -13,11 +13,15 @@ import './Header.css';
 
 function CollapsibleExample() {
     const { user, logOut } = useContext(AuthContext);
+    const [showUser, setShowUser] = useState(false);
     // console.log(user);
     const { theme, setTheme } = useContext(ToggleThemeContext);
     const toggleTheme = () => {
         setTheme(!theme)
     };
+    const handleShowUser = (event) => {
+        setShowUser(true)
+    }
     const signOutHandle = () => {
         logOut()
             .then(() => { })
@@ -32,25 +36,27 @@ function CollapsibleExample() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="/courses">Courses</Nav.Link>
-
+                        <Nav.Link href="/faq">FAQ</Nav.Link>
+                        <Nav.Link href="/blog">Blog</Nav.Link>
                     </Nav>
                     <Nav className='align-items-center'>
-                        {user?.uid &&
-                            <div className='me-3'>
-                                {
-                                    user?.photoURL ?
-                                        <Image src={user.photoURL} roundedCircle style={{ width: '2rem' }}></Image> :
-                                        <FaUserAlt style={{ 'color': '#fff' }} />
-                                }
-                            </div>}
+                        {
+                            user?.uid &&
+                            <div className='d-flex flex-row-reverse align-items-center'>
+                                <div className='me-3 user-img text-end'>
+                                    {
+                                        user?.photoURL ?
+                                            <Image src={user.photoURL} roundedCircle style={{ width: '2rem' }}></Image> :
+                                            <FaUserAlt style={{ 'color': '#fff' }} />
+                                    }
+                                </div>
+                                <div className='me-3 uName bg-dark text-white'>
+                                    <Nav.Link to='/'>{user.displayName ? user.displayName : user.email}
+                                    </Nav.Link>
+                                </div>
+                            </div>
+                        }
 
-                        <div className='me-3'>
-                            {
-                                user?.uid &&
-                                <Nav.Link to='/'>{user.displayName ? user.displayName : user.email}
-                                </Nav.Link>
-                            }
-                        </div>
                         <div>
                             {
                                 user?.uid ?
