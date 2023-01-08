@@ -1,0 +1,15 @@
+.App-header .course-dark{
+    color: rgb(0, 0, 0);
+  }
+  .App-header .course-cat-dark a{
+    color: rgb(255, 255, 255);
+  }
+.nav-link:focus{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #FFFFFF;
+    transition: ease-in 100s;
+}
+.light {
+  background-color: rgb(255, 255, 255);
+  color: #333;
+}
