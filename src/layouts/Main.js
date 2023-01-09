@@ -11,14 +11,7 @@ const Main = () => {
             <Header></Header>
             <div className='contain'>
                 <Container>
-                    <Row>
-                        <Col lg={10}>
-                            <Outlet></Outlet>
-                        </Col>
-                        <Col>
-                            <RightSideNav></RightSideNav>
-                        </Col>
-                    </Row>
+                    <Outlet></Outlet>
                 </Container>
             </div>
         </div>

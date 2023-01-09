@@ -8,10 +8,10 @@ import ProtectedRoutes from './Routes/ProtectedRoutes';
 import Home from './components/Home/Home';
 import NotFound from './components/404 _page/NotFound';
 import Category from './components/Category/Category';
-import Courses from './components/Courses/Courses';
 import FAQ from './components/FAQ/FAQ';
 import Blog from './components/Blog/Blog';
 import CheckOut from './components/CheckOut/CheckOut';
+import CourseDetails from './components/CourseDetails/CourseDetails';
 
 function App() {
   const router = createBrowserRouter([
@@ -62,7 +62,7 @@ function App() {
           path: '/course/:id',
           element:
           // <ProtectedRoutes>
-            <Courses></Courses>,
+            <CourseDetails></CourseDetails>,
           // </ProtectedRoutes>,
           loader: ({ params }) => fetch(`https://server-site-flame.vercel.app/course/${params.id}`)
 

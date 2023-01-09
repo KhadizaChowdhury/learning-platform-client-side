@@ -1,46 +1,30 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { FiStar, FiEye } from 'react-icons/fi';
-import './CourseInfo.css'
+import { Button, Card } from 'react-bootstrap';
+import { FiStar } from 'react-icons/fi';
+import './CourseInfo.css';
 
 const CourseInfo = (props) => {
     const { course } = props;
     // console.log(course)
-    const { _id, title, thumbnail_url, author, details, rating, total_view } = course;
-    const { name, published_date, img } = author;
+    const { _id, title, thumbnail_url, rating } = course;
     return (
-        <div className='col course-dark'>
-            <Card className='mb-3'>
-                <Card.Header>
-                    <div className='d-flex align-items-center'>
-                        <div className='me-3'>
-                            <img className='author_img img-fluid' src={img} alt="Author-Img" />
+        <div className='px-3'>
+            <div className='col course-dark'>
+                <Card className='mb-3'>
+                    <Card.Body>
+                        <Card.Img className='thumbnail_img img-fluid' src={thumbnail_url} />
+                        <Card.Title>{title}</Card.Title>
+                    </Card.Body>
+                    <Card.Footer className='d-flex align-items-center justify-content-between'>
+                        <div>
+                            <Button href={`/course/${_id}`}>Course Details</Button>
                         </div>
                         <div>
-                            <p className='m-0'>{name}</p>
-                            <p className='m-0'>{published_date}</p>
+                            <FiStar className='me-2' />{rating.number}
                         </div>
-                    </div>
-                </Card.Header>
-                <Card.Body>
-                    <Card.Title>{title}</Card.Title>
-                    <Card.Img className='thumbnail_img img-fluid' src={thumbnail_url} />
-                    <Card.Text>
-                        {
-                            details?.length > 200 ?
-                                <span>{details?.slice(0, 250) + '...'} <Link to={`/course/${_id}`}>Read More</Link></span>
-                                :
-                                <span>{details}</span>
-
-                        }
-                    </Card.Text>
-                </Card.Body>
-                <Card.Footer className='d-flex justify-content-between'>
-                    <div><FiStar className='me-2' />{rating.number}</div>
-                    <div><FiEye className='me-2' />{total_view}</div>
-                </Card.Footer>
-            </Card>
+                    </Card.Footer>
+                </Card>
+            </div>
         </div>
     );
 };
