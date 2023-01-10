@@ -15,9 +15,9 @@ const CourseInfo = (props) => {
                         <Card.Img className='thumbnail_img img-fluid' src={thumbnail_url} />
                         <Card.Title>{title}</Card.Title>
                     </Card.Body>
-                    <Card.Footer className='d-flex align-items-center justify-content-between'>
+                    <Card.Footer className='callout-info d-flex align-items-center justify-content-between'>
                         <div>
-                            <Button href={`/course/${_id}`}>Course Details</Button>
+                            <Button className='c-info' href={`/course/${_id}`}>Course Details</Button>
                         </div>
                         <div>
                             <FiStar className='me-2' />{rating.number}

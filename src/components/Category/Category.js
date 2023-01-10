@@ -8,12 +8,12 @@ const Category = () => {
     const catCourses = useLoaderData()
     return (
         <div>
-            <Row>
+            <Row className='mt-5'>
                 <Col lg={10}>
                     {
                         catCourses.length > 0 ?
                             <div>
-                                <h2>This Category has {catCourses.length} Course</h2>
+                                <h2 className='mb-5'>This Category has {catCourses.length} Course</h2>
                                 <div className='course row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-4'>
                                     {
                                         catCourses.map(cat_course =>
@@ -28,7 +28,7 @@ const Category = () => {
                             </div>
                     }
                 </Col>
-                <Col>
+                <Col className='ms-3'>
                     <RightSideNav></RightSideNav>
                 </Col>
             </Row>

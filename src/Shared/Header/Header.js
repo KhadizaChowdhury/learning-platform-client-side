@@ -38,10 +38,10 @@ function CollapsibleExample() {
                     width="40"
                     height="40"
                     className="me-3"
-                />Smart Learning</Navbar.Brand>
+                />TechTutor</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto ms-2 ms-lg-5">
+                    <Nav className="me-auto ms-2">
                         <Nav.Link href="/courses">Courses</Nav.Link>
                         <Nav.Link href="/faq">FAQ</Nav.Link>
                         <Nav.Link href="/blog">Blog</Nav.Link>

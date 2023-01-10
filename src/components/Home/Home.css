@@ -1,0 +1,7 @@
+.hero{
+    background-image: url('../../images/photo-1546410531-bb4caa6b424d.avif');
+    height: 80vh;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+}

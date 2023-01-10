@@ -8,3 +8,10 @@
     height: 300px;
     object-fit: fill;
 }
+.callout-info{
+    background-color: #b3ccd1;
+}
+.c-info{
+    background-color: #087990;
+    border-color: #087990;;
+}
