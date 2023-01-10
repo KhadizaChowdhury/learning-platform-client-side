@@ -1,6 +1,7 @@
 .contain {
   max-width: 1300px;
   margin: auto;
+  overflow-x: hidden;
 }
 
 body {
