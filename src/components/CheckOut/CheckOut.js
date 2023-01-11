@@ -7,7 +7,7 @@ const CheckOut = () => {
     const { _id, title, image_url, category_id, details } = getAccess[0];
     return (
         <div>
-            {title}
+            Course Name: {title}
         </div>
     );
 };

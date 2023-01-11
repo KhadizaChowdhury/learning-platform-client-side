@@ -143,17 +143,21 @@ const Login = () => {
                                             Submit
                                         </Button>
                                     </Form>
-                                    <p className="mt-3">Not a member yet? <Link to='/register'>Join now</Link></p>
-                                    <p>Forgot Password? <Link onClick={resetPassword}>Reset Password</Link></p>
+                                    <p className="mt-3">Not a member yet?
+                                    <Button href="/register" className="btn ms-3 btn-sm" variant="info" type="submit">Join now</Button></p>
+                                    <p>Forgot Password?
+                                    <Button onClick={resetPassword} className="btn ms-2 btn-sm" variant="warning" type="submit">Reset Password</Button>
+                                    </p>
                                     <div className='d-flex my-3'>
-                                        <div className='me-3'>
+                                        <div className='me-2'>
                                             <button onClick={googleSignInHandle} className="btn btn-sm btn-outline btn-success">Google Sign In</button>
                                         </div>
                                         {/* <div>
                                 <button onClick={fbSignInHandle}>Facebook Sign In</button>
                             </div> */}
                                         <div>
-                                            <button onClick={gitSignInHandle}>GitHub Sign In</button>
+                                        <Button onClick={gitSignInHandle} className="btn btn-sm" variant="dark" type="submit">
+                                        GitHub Sign In</Button>
                                         </div>
                                     </div>
                                 </div>

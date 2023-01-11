@@ -9,7 +9,7 @@ import { Toast } from 'react-bootstrap';
 
 const auth = getAuth(app);
 const Register = () => {
-    const { user, createUser, verifyEmail, updateUserProfile, googleSignIn, fbSignIn, gitSignIn } = useContext(AuthContext);
+    const { user, createUser, verifyEmail, updateUserProfile } = useContext(AuthContext);
     // console.log(createUser);
     const navigate = useNavigate();
     const location = useLocation();
@@ -66,40 +66,6 @@ const Register = () => {
 
     const handleAccepted = (event) => {
         setAccepted(event.target.checked)
-    }
-
-    const googleSignInHandle = () => {
-        googleSignIn()
-            .then((result) => {
-                const user = result.user;
-                console.log(user);
-                navigate(from, { replace: true });
-            })
-            .catch(error => {
-                console.error("Error:", error);
-            })
-    }
-    // const fbSignInHandle = () => {
-    //     fbSignIn()
-    //         .then((result) => {
-    //             const user = result.user;
-    //             console.log(user);
-    //         })
-    //         .catch(error => {
-    //             console.error("Error:", error);
-    //         })
-
-    // }
-    const gitSignInHandle = () => {
-        gitSignIn()
-            .then((result) => {
-                const user = result.user;
-                console.log(user);
-                navigate(from, { replace: true });
-            })
-            .catch(error => {
-                console.error("Error:", error);
-            })
     }
 
     const handleVerifyEmail = () => {
@@ -171,23 +137,12 @@ const Register = () => {
                                             </div>
                                         }
                                         {
-                                            user?.uid ?
+                                            user?.uid &&
                                                 <Button variant="primary" type="submit">
                                                     Update Now
-                                                </Button> :
-                                                <Button variant="primary" type="submit" disabled={(!accepted)}>
-                                                    Register Now
                                                 </Button>
                                         }
                                     </Form>
-                                    <p className="label"> Already a member?
-                                        <Link to='/login' className="btn btn-sm btn-outline btn-error">Sign In</Link>
-                                    </p>
-                                    <div className='d-flex my-3'>
-                                        <button onClick={googleSignInHandle} className="my-2 btn btn-block btn-success">Google Sign In</button>
-                                        {/* <button onClick={fbSignInHandle} className="my-2 btn btn-block btn-info">Facebook Sign In</button> */}
-                                        <button onClick={gitSignInHandle} className="my-2 btn btn-block">GitHub Sign In</button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -249,13 +204,9 @@ const Register = () => {
                                         }
                                     </Form>
                                     <p className="label"> Already a member?
-                                        <Link to='/login' className="btn btn-sm btn-outline btn-error">Sign In</Link>
+                                    <Button href="/login" className="btn ms-3 btn-sm" variant="success" type="submit">
+                                    Sign In</Button>
                                     </p>
-                                    <div className='d-flex my-3'>
-                                        <button onClick={googleSignInHandle} className="my-2 btn btn-block btn-success">Google Sign In</button>
-                                        {/* <button onClick={fbSignInHandle} className="my-2 btn btn-block btn-info">Facebook Sign In</button> */}
-                                        <button onClick={gitSignInHandle} className="my-2 btn btn-block">GitHub Sign In</button>
-                                    </div>
                                 </div>
                             </div>
                         </div>

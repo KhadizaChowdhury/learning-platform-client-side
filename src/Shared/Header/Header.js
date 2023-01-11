@@ -51,11 +51,13 @@ function CollapsibleExample() {
                             user?.uid &&
                             <div className='d-flex flex-lg-row-reverse align-items-center'>
                                 <div className='me-3 user-img text-end'>
+                                    <a href="/register">
                                     {
                                         user?.photoURL ?
                                             <Image src={user.photoURL} roundedCircle style={{ width: '2rem' }}></Image> :
                                             <FaUserAlt style={{ 'color': '#fff' }} />
                                     }
+                                    </a>
                                 </div>
                                 <div className='me-3 uName bg-dark text-white'>
                                     <Nav.Link to='/'>{user.displayName ? user.displayName : user.email}
@@ -63,7 +65,6 @@ function CollapsibleExample() {
                                 </div>
                             </div>
                         }
-
                         <div>
                             {
                                 user?.uid ?
