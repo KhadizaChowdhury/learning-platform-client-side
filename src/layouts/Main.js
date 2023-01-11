@@ -9,11 +9,9 @@ const Main = () => {
     return (
         <div>
             <Header></Header>
-            <div className='contain'>
-                <Container>
-                    <Outlet></Outlet>
-                </Container>
-            </div>
+            <Container>
+                <Outlet></Outlet>
+            </Container>
         </div>
     );
 };

@@ -147,7 +147,7 @@ const Register = () => {
             {
                 user?.uid ?
                     <div>
-                        <div className="text-center lg:text-left">
+                        <div className="text-center mb-5 lg:text-left">
                             <h1 className="text-5xl font-bold">Update Profile</h1>
                         </div>
                         <div className="hero-content course-dark flex-col lg:flex-row-reverse">
@@ -194,7 +194,7 @@ const Register = () => {
                     </div>
                     :
                     <div>
-                        <div className="text-center lg:text-left">
+                        <div className="text-center mb-5 lg:text-left">
                             <h1 className="text-5xl font-bold">Register Now!</h1>
                         </div>
                         <div className="hero-content course-dark flex-col lg:flex-row-reverse">

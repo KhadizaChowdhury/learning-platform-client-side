@@ -105,7 +105,7 @@ const Login = () => {
                         <button onClick={signOutHandle}>Sign Out</button>
                     </div>
                     :
-                    <div><div className="text-center lg:text-left">
+                    <div><div className="text-center mb-5 lg:text-left">
                         <h1 className="text-5xl font-bold">LogIn Here!</h1>
                     </div>
                         <div className="hero-content course-dark flex-col lg:flex-row-reverse">

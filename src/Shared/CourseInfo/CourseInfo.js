@@ -9,13 +9,13 @@ const CourseInfo = (props) => {
     const { _id, title, thumbnail_url, rating } = course;
     return (
         <div className='px-3'>
-            <div className='col course-dark'>
+            <div className='col courses course-dark'>
                 <Card className='mb-3'>
                     <Card.Body>
                         <Card.Img className='thumbnail_img img-fluid' src={thumbnail_url} />
-                        <Card.Title>{title}</Card.Title>
+                        <Card.Title className='mt-3'>{title}</Card.Title>
                     </Card.Body>
-                    <Card.Footer className='callout-info d-flex align-items-center justify-content-between'>
+                    <Card.Footer className='call-info d-flex align-items-center justify-content-between'>
                         <div>
                             <Button className='c-info' href={`/course/${_id}`}>Course Details</Button>
                         </div>

@@ -48,7 +48,7 @@ const Home = () => {
             <Row>
                 <Col lg={10}>
                     <div>
-                        <div className='hero row p-5 align-items-center'>
+                        <div className='hero row mt-2 p-5 align-items-center'>
                             <h3>TechTutor Solutions provides top-notch guidance to help you become a web development expert.
                             </h3>
                         </div>
