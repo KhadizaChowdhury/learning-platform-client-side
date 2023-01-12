@@ -1,5 +1,14 @@
+#Webite Name: TechTutor
+
 # Live Site:
-https://gilded-eclair-6b6011.netlify.app/
+https://coursewebsite-af218.web.app/
+
+# Frameworks & packages:
+1. Bootstrap
+2. React
+3. React-multi-carousel
+4. React-to-pdf
+5. React-icons
 
 # Getting Started with Create React App
 
